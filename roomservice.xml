@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+  <project name="mehanik6/kernel_samsung_gto" path="kernel/samsung/gto" revision="master" remote="github" />
+  <project name="mehanik6/android_device_samsung_gto" path="device/samsung/gto" revision="master" remote="github" />
+  <project name="mentalmuso/twrp_android_device_samsung_d2q" path="device/samsung/d2q" revision="master" remote="github" />
+</manifest>
+
