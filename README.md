@@ -10,7 +10,7 @@ TWRP Setup
     create local_manifests folder in .repo (cd .repo 
     mkdir local_manifests;
     cd local_manifests
-    mv ~/twrp/device/samsung/gto/roomservice.xml .
+    copy the roomservice.xml contents to ~/twrp/device/samsung/gto/roomservice.xml
     cd ~/twrp
     repo sync (will take awhile to sync) maybe go have a coffee somwhere
 
