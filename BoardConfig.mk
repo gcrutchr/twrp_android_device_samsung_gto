@@ -39,7 +39,7 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOOTLOADER_BOARD_NAME := gto
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78B0000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true loop.max_part=7
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78B0000 firmware_class.path=/vendor/firmware_mnt/image selinux="0" androidboot.usbconfigfs=true loop.max_part=7
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -56,10 +56,10 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/gto
-TARGET_KERNEL_CONFIG := gto_defconfig
+# TARGET_KERNEL_ARCH := arm64
+# TARGET_KERNEL_HEADER_ARCH := arm64
+# TARGET_KERNEL_SOURCE := kernel/samsung/gto
+# TARGET_KERNEL_CONFIG := gto_defconfig
 
 # Platform
 # Fix this
@@ -114,14 +114,15 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
-#TW_USE_TOOLBOX := true
-#TW_MTP_DEVICE := /dev/usb_mtp_gadget 
-#TW_HAS_MTP := true
+# uncommented for testing
+# TW_USE_TOOLBOX := true
+# TW_MTP_DEVICE := /dev/usb_mtp_gadget 
+# TW_HAS_MTP := true
 
-TW_DEVICE_VERSION := 1-mehanik6 (4PDA) SM-T295
+TW_DEVICE_VERSION := gcrutchr (xda-developers)
 TW_NO_SCREEN_TIMEOUT := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_DEFAULT_LANGUAGE := ru
+TW_DEFAULT_LANGUAGE := en
 
 
 
